@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="version" content="1.5.0"/>
+  <title>SpinLog</title>
+  <link rel="preload" href="Imgs/image.jpg" as="image">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav-container">
+        <div class="logo">
+          <i class="fas fa-circle-notch"></i>
+          SpinLog
+        </div>
+        <nav class="desktop-nav-wrap" role="navigation" aria-label="Main Navigation">
+          <ul class="desktop-nav">
+            <li data-section="home" class="active">
+              <button tabindex="0" aria-current="page">
+                <i class="fas fa-house"></i>
+                Home
+              </button>
+            </li>
+            <li data-section="service">
+              <button tabindex="0">
+                <i class="fas fa-screwdriver-wrench"></i>
+                Service
+              </button>
+            </li>
+            <li data-section="emi">
+              <button tabindex="0">
+                <i class="fas fa-wallet"></i>
+                EMI
+              </button>
+            </li>
+            <li data-section="docs">
+              <button tabindex="0">
+                <i class="fas fa-folder-open"></i>
+                Docs
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+    <nav class="mobile-nav-menu" id="mobileMenu" role="navigation" aria-label="Mobile Navigation">
+      <ul class="mobile-nav-list">
+        <li data-section="home" class="active">
+          <button tabindex="0" aria-current="page">
+            <i class="fas fa-house"></i>
+            Home
+          </button>
+        </li>
+        <li data-section="service">
+          <button tabindex="0">
+            <i class="fas fa-screwdriver-wrench"></i>
+            Service
+          </button>
+        </li>
+        <li data-section="emi">
+          <button tabindex="0">
+            <i class="fas fa-wallet"></i>
+            EMI
+          </button>
+        </li>
+        <li data-section="docs">
+          <button tabindex="0">
+            <i class="fas fa-folder-open"></i>
+            Docs
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <main role="main">
+      <section id="home" class="active" aria-labelledby="home-header">
+        <h2 id="home-header"><i class="fas fa-house"></i> Hello, Viky!</h2>
+        <p style="font-size:1.1rem; margin-bottom:20px;">Welcome to <strong>SpinLog</strong></p>
+        <div class="bike-card">
+          <div class="left-group">
+            <div class="bike-details">
+              <p><strong>Bike Name:</strong><br/>Duke 250 Gen 3</p>
+              <p><strong>Registration Number:</strong><br/>TN 60 BV 1227</p>
+              <p><strong>Purchase Date:</strong><br/>27-06-2025</p>
+              <p><strong>Own Damage Cover:</strong><br/>
+                <span class="status" data-due="2026-06-24"></span>
+              </p>
+              <p><strong>Liability Cover:</strong><br/>
+                <span class="status" data-due="2030-06-24"></span>
+              </p>
+              <p><strong>Purchase Price:</strong><br/>₹2,84,000</p>
+              <p><strong>Engine No.:</strong><br/>S-96215524</p>
+              <p><strong>VIN / Chassis No.:</strong><br/>MD2JPEXC0SN078159</p>
+            </div>
+            <div class="desktop-info">
+              <p id="home-odo"><strong>Odometer:</strong><br/>0 km</p>
+              <p id="home-last"><strong>Last Service:</strong><br/>N/A</p>
+              <p id="home-next"><strong>Next Service:</strong><br/>N/A</p>
+            </div>
+          </div>
+          <div class="right-col">
+            <div class="bike-image">
+              <img src="./Imgs/image.jpg" alt="Duke 250 Black" loading="lazy"/>
+            </div>
+            <div class="mobile-odo-service">
+              <p id="home-odo-mobile"><strong>Odometer:</strong><br>0 km</p>
+              <p id="home-last-mobile"><strong>Last Service:</strong><br>N/A</p>
+              <p id="home-next-mobile"><strong>Next Service:</strong><br>N/A</p>
+            </div>
+          </div>
+        </div>
+        <h3><i class="fas fa-gear"></i>Specifications</h3>
+        <div class="specs-container">
+          <div class="spec-card">
+            <h4><i class="fas fa-gauge"></i>Engine</h4>
+            <p>
+              249.07 cc<br/>
+              Bore: 72 mm<br/>
+              Stroke: 61.1 mm<br/>
+              Compression Ratio: 12.63:1<br/>
+              Max Power: 30.57 bhp @ 9,250 rpm<br/>
+              Max Torque: 25 Nm @ 7,250 rpm<br/>
+              Cooling: Liquid Cooled<br/>  
+              Fuel System: Bosch EFI<br/>
+              Emission: BS6 Phase 2B
+            </p>
+          </div>
+          <div class="spec-card">
+            <h4><i class="fas fa-cogs"></i>Transmission</h4>
+            <p>
+              6-Speed Manual<br/>
+              Gear Pattern: 1 Down, 5 Up<br/>
+              Assist & Slipper Clutch
+            </p>
+          </div>
+          <div class="spec-card">
+            <h4><i class="fas fa-tools"></i>Chassis & Suspension</h4>
+            <p>
+              Split-Trellis Frame<br/>
+              WP Apex USD Forks, 43 mm<br/>
+              WP Apex Monoshock, 10-step preload
+            </p>
+          </div>
+          <div class="spec-card">
+            <h4><i class="fas fa-circle-notch"></i>Wheels & Tyres</h4>
+            <p>
+              Alloy Wheels, 17″<br/>
+              Tyres: 110/70-R17 (Front), 150/60-R17 (Rear)<br/>
+              Pressure (Solo): 29 psi Front / 32 psi Rear<br/>
+              Pressure (Pillion): 29 / 32 psi
+            </p>
+          </div>
+          <div class="spec-card">
+            <h4><i class="fas fa-stop-circle"></i>Brakes</h4>
+            <p>
+              Supermoto ABS<br/>
+              Front: 320 mm Disc, 4-Piston Caliper<br/>
+              Rear: 240 mm Disc, 2-Piston Caliper
+            </p>
+          </div>
+          <div class="spec-card">
+            <h4><i class="fas fa-tachometer-alt"></i>Dimensions</h4>
+            <p>
+              Kerb Weight: 162.8 kg<br/>
+              Seat Height: 800 mm<br/>
+              Ground Clearance: 176 mm<br/>
+              Fuel Tank: 15 L (Reserve 3 L)<br/>
+              Wheelbase: 1,370 mm
+            </p>
+          </div>
+          <div class="spec-card">
+            <h4><i class="fas fa-star"></i>Additional Features</h4>
+            <p>
+              Quickshifter+<br/>
+              Ride-by-Wire Throttle<br/>
+              TFT Instrument Cluster<br/>
+              LED Headlight & DRLs
+            </p>
+          </div>
+        </div>
+      </section>
+      
+     <!-- SpinLog v1.6.3 | Service Section -->
+      <section id="service" aria-labelledby="service-header">
+        <h2 id="service-header" class="service-title">
+          <i class="fas fa-screwdriver-wrench"></i> Service Records
+        </h2>
+        <div class="service-placeholder-card">
+          <div class="service-placeholder-icon">
+            <div class="service-management-desc">
+              Track your bike's service history, schedule upcoming maintenance, and set reminders for regular checkups.
+            </div>
+          </div>
+          <form id="serviceEntryForm" autocomplete="off" enctype="multipart/form-data">
+            <div class="form-in-card-row">
+              <label>
+                <span>Type</span>
+                <select name="type" id="serviceType" required>
+                  <option value="">Select</option>
+                  <option value="Showroom">Showroom</option>
+                  <option value="3rd Party">3rd Party</option>
+                  <option value="Mods/Updates">Mods/Updates</option>
+                </select>
+              </label>
+              <label>
+                <span>Date</span>
+                <input type="date" name="date" required>
+              </label>
+              <label id="nextDueLabel">
+                <span>Next Due Date</span>
+                <input type="date" name="nextDue">
+              </label>
+              <label>
+                <span>ODO (km)</span>
+                <input type="number" name="odo" min="0" required>
+              </label>
+            </div>
+            <div class="form-in-card-row">
+              <label>
+                <span>Cost (₹)</span>
+                <input type="number" name="cost" min="0" step="0.01" placeholder="Amount" required>
+              </label>
+              <label>
+                <span>Bill</span>
+                <input type="file" name="bill" accept="image/*,application/pdf,.pdf" required>
+              </label>
+            </div>
+            <label>
+              <span>Notes</span>
+              <textarea name="notes" rows="1" placeholder="Any extra notes." required></textarea>
+            </label>
+            <div class="form-in-card-actions">
+              <button type="submit" class="drawer-submit">Add Entry</button>
+            </div>
+          </form>
+          <h4 class="record-history-title">Record History</h4>
+          <div class="service-table-wrap">
+            <table class="service-table">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Date</th>
+                  <th>Next Due</th>
+                  <th>Odo (km)</th>
+                  <th>Cost (₹)</th>
+                  <th>Notes</th>
+                  <th>Bill</th>
+                </tr>
+              </thead>
+              <tbody id="serviceTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="emi" aria-labelledby="emi-header">
+        <h2 id="emi-header"><i class="fas fa-wallet"></i> EMI Tracker</h2>
+        <div class="placeholder-content">
+          <i class="fas fa-credit-card"></i>
+          <h3>EMI Management</h3>
+          <p>Monitor your bike loan payments, track remaining installments, and manage your financial commitments.</p>
+        </div>
+      </section>
+      <section id="docs" aria-labelledby="docs-header">
+        <h2 id="docs-header"><i class="fas fa-folder-open"></i> Documents</h2>
+        <div class="placeholder-content">
+          <i class="fas fa-file-alt"></i>
+          <h3>Document Storage</h3>
+          <p>Store and organize all your bike-related documents including registration, insurance, and service records.</p>
+        </div>
+      </section>
+      
+    </main>
+  </div>
+
+   
+  <!-- Custom Popup Modal -->
+  <div id="customPopup" class="popup-overlay">
+    <div class="popup-content">
+      <div class="popup-icon">
+        <i class="fas fa-circle-notch fa-spin" id="popupSpinner"></i>
+        <i class="fas fa-thumbs-up" id="popupSuccess" style="display: none;"></i>
+        <i class="fas fa-exclamation-triangle" id="popupError" style="display: none;"></i>
+      </div>
+      <div class="popup-message" id="popupMessage">Processing...</div>
+    </div>
+  </div>
+
+  
+  <!-- Supabase client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
